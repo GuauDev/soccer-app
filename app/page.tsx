@@ -17,9 +17,9 @@ const matches = [
 		id: 1,
 		homeTeam: "Manchester United",
 		awayTeam: "Liverpool",
-		homeScore: 2,
-		awayScore: 1,
-		status: "live", // live | upcoming | finished
+		homeScore: 0,
+		awayScore: 3,
+		status: "finished", // live | upcoming | finished
 		homePlayers: {
 			lineup: [
 				[{ name: "De Gea", position: "GK", number: 1 }],
@@ -779,16 +779,14 @@ const matches = [
 
 export default function Component() {
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-200 p-4 sm:p-6 md:p-8">
+		<div className="min-h-screen  p-4 sm:p-6 md:p-8">
 			<div className="max-w-7xl mx-auto">
-				<h1 className="text-3xl font-bold mb-6 text-blue-900 text-center">
-					Soccer Matches
-				</h1>
+				<h1 className="text-3xl font-bold mb-6 text-center">Soccer Matches</h1>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 					{matches.map((match) => (
 						<Dialog key={match.id}>
 							<DialogTrigger asChild>
-								<Card className="overflow-hidden bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 cursor-pointer">
+								<Card className="overflow-hidden  shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 cursor-pointer">
 									<CardContent className="p-4">
 										<div className="flex justify-between items-center mb-2">
 											<Badge

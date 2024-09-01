@@ -258,17 +258,18 @@ export const FieldGraphic = ({
 									x={position.x}
 									y={position.y + 8}
 									fontSize="3"
-									className="font-bold"
 									fill="white"
 									textAnchor="middle"
+									fontWeight={900}
 								>
 									{player.name}
 								</text>
 								<text
 									x={position.x}
-									y={position.y + 2}
+									y={position.y + 1.5}
 									fontSize="4"
 									fill="black"
+									fontWeight={600}
 									textAnchor="middle"
 								>
 									{player.number}
